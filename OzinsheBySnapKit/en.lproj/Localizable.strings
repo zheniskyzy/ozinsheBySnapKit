@@ -1,0 +1,54 @@
+/* 
+  Localizable.strings
+  OzinsheBySnapKit
+
+  Created by Madina Olzhabek on 10.02.2024.
+  
+*/
+
+"MY_PROFILE" = "My Profile";
+"PROFILE" = "Profile";
+"LANGUAGE" = "Language";
+"PERSONAL_INFO" = "Personal Information";
+"YOUR_NAME" = "You name";
+"BIRTH_DATE" = "Birthday Date";
+"SAVE_CHANGES" = "Save changes";
+"EXIST" = "Exist";
+"EXIST_SUBTITLE" = "Do you really want to log out of your account?";
+"YES" = "Yes, exist";
+"NO" = "No";
+"PASSWORD" = "Password";
+"CHANGE" = "Change";
+"CHANGE_PASSWORD" = "Change password";
+"TERMS_AND_CONDITIONS" = "Terms and conditions";
+"ANNOUNCEMENTS" = "Announcements";
+"DARK_MODE" = "Dark mode";
+"REPEAT_PASSWORD" = "Repeat password";
+"YOUR_PASSWORD" = "Your password";
+"CONNECTION_ERROR" = "Connection error";
+"HELLO" = "Hello!";
+"SIGN_INTO_YOUR_ACCOUNT" = "Sign in to your account";
+"DONT_HAVE_AN_ACCAOUNT?" = "Don't have an account?";
+"REGISTRATION" = "Registration";
+"YOUR_EMAIL" = "Your email";
+"SIGN_IN" = "Sign in";
+"SEARCH" = "Search";
+"CATEGORIES" = "Categories";
+"DO_YOU_HAVE_AN_ACC" = "Do you have an account?";
+"FILL_IN_THE_DATA" = "Fill in the data";
+"PLAY" = "Play";
+"SEARCH_RESULT" = "Search result";
+"FAVORITE" = "Favorite";
+"SKIP" = "Skip";
+"CONTINUE_WATCHING" = "Continue watching";
+"APPROPIATE_FOR_AGE" = "Appropriate for age";
+"CHOOSE_A_GENRE" = "Choose a genre";
+"MORE" = "More";
+"ADD_TO_FAVORITE" = "Add to favorite";
+"SHARE" = "Share";
+"READ_MORE" = "Read more";
+"DIRECTOR" = "Director";
+"PRODUCER" = "Producer";
+"DEPARTMENTS" = "Departments";
+"SCREENSHOTS" = "Screenshots";
+"SIMILAR_TV" = "Similar TV";

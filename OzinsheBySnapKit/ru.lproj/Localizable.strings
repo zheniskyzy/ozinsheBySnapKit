@@ -1,0 +1,54 @@
+/* 
+  Localizable.strings
+  OzinsheBySnapKit
+
+  Created by Madina Olzhabek on 10.02.2024.
+  
+*/
+
+"MY_PROFILE" = "Мой профиль";
+"PROFILE" = "Профиль";
+"LANGUAGE" = "Язык";
+"PERSONAL_INFO" = "Персональная информация";
+"YOUR_NAME" = "Ваше имя";
+"BIRTH_DATE" = "Дата рождения";
+"SAVE_CHANGES" = "Сохранить изменения";
+"EXIST" = "Выход";
+"EXIST_SUBTITLE" = "Ты действительно хочешь выйти со своего аккаунта";
+"YES" = "Да, выйти";
+"NO" = "Нет";
+"PASSWORD" = "Пароль";
+"CHANGE" = "Изменить";
+"CHANGE_PASSWORD" = "Изменить пароль";
+"TERMS_AND_CONDITIONS" = "Условия и положения";
+"ANNOUNCEMENTS" = "Уведомления";
+"DARK_MODE" = "Темный режим";
+"REPEAT_PASSWORD" = "Повторите пароль";
+"YOUR_PASSWORD" = "Ваш пароль";
+"CONNECTION_ERROR" = "Ошибка соединения";
+"HELLO" = "Здравствуйте!";
+"SIGN_INTO_YOUR_ACCOUNT" = "Войдите в свой аккаунт";
+"DONT_HAVE_AN_ACCAOUNT?" = "У вас нет учетной записи?";
+"REGISTRATION" = "Регистрация";
+"YOUR_EMAIL" = "Ваш email";
+"SIGN_IN" = "Войти";
+"SEARCH" = "Поиск";
+"CATEGORIES" = "Категории";
+"DO_YOU_HAVE_AN_ACC" = "У тебя есть аккаунт?";
+"FILL_IN_THE_DATA" = "Заполните данные";
+"PLAY" = "Смотреть";
+"SEARCH_RESULT" = "Результаты поиска";
+"FAVORITE" = "Избранное";
+"SKIP" = "Пропустить";
+"CONTINUE_WATCHING" = "Продолжить просмотр";
+"APPROPIATE_FOR_AGE" = "Соответствует возрасту";
+"CHOOSE_A_GENRE" = "Выберите жанр";
+"MORE" = "Все";
+"ADD_TO_FAVORITE" = "Добавить в избранное";
+"SHARE" = "Поделиться";
+"READ_MORE" = "Подробнее";
+"DIRECTOR" = "Режиссер";
+"PRODUCER" = "Продюсер";
+"DEPARTMENTS" = "Разделы";
+"SCREENSHOTS" = "Скриншоты";
+"SIMILAR_TV" = "Похожие сериалы";
