@@ -52,3 +52,9 @@
 "DEPARTMENTS" = "Разделы";
 "SCREENSHOTS" = "Скриншоты";
 "SIMILAR_TV" = "Похожие сериалы";
+"NEXT" = "Следующий";
+"OR" = "Или";
+"LOGIN_WITH_GOOGLE" = "Войти через Google";
+"LOGIN_WITH_APPLE" = "Войти через Apple";
+"INVALID_FORMAT" = "Неверный формат";
+"FORGOT_PASSWORD?" = "Забыли пароль?";

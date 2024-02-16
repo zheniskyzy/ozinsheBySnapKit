@@ -31,8 +31,8 @@ class TabBarController: UITabBarController {
         
         searchVC.tabBarItem.image = UIImage(named: "Search")
         searchVC.tabBarItem.selectedImage = UIImage(named: "SearchSelected")
-        
-        let VCs = [homeVC, favoriteVC, profileVC, searchVC]
+        //дополнить
+        let VCs = [UINavigationController(rootViewController: homeVC), favoriteVC, profileVC, searchVC]
         setViewControllers(VCs, animated: true)
         
         }

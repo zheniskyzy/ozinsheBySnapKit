@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CBAFEB96C6B87CF0A6CF518D /* Pods_OzinsheBySnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B1C0B0A64CE884EF6F1B2BE /* Pods_OzinsheBySnapKit.framework */; };
+		D40190632B7E1EB200E9802B /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40190622B7E1EB200E9802B /* TextField.swift */; };
+		D40190652B7F6DC800E9802B /* ReusableFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40190642B7F6DC800E9802B /* ReusableFuncs.swift */; };
 		D42877C02B76A5F500E7935C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42877BF2B76A5F500E7935C /* AppDelegate.swift */; };
 		D42877C22B76A5F500E7935C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42877C12B76A5F500E7935C /* SceneDelegate.swift */; };
 		D42877C92B76A5F600E7935C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D42877C82B76A5F600E7935C /* Assets.xcassets */; };
@@ -22,8 +24,10 @@
 		D4B2FE632B7A1B6F00C0892E /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B2FE622B7A1B6F00C0892E /* GradientView.swift */; };
 		D4B2FE662B7A5B6B00C0892E /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B2FE652B7A5B6B00C0892E /* OnboardingCell.swift */; };
 		D4B2FE6D2B7B58AA00C0892E /* OnboardingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B2FE6C2B7B58AA00C0892E /* OnboardingItem.swift */; };
+		D4B2FE6F2B7CD17B00C0892E /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B2FE6E2B7CD17B00C0892E /* CustomNavigationController.swift */; };
+		D4B2FE712B7CEEA100C0892E /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B2FE702B7CEEA100C0892E /* RegistrationViewController.swift */; };
+		D4B2FE732B7E181E00C0892E /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B2FE722B7E181E00C0892E /* TextFieldView.swift */; };
 		D4C65C352B76AD1E006C44C5 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C65C342B76AD1E006C44C5 /* SignInViewController.swift */; };
-		D4C65C3C2B76D786006C44C5 /* TextFielWithPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C65C3B2B76D786006C44C5 /* TextFielWithPadding.swift */; };
 		D4C65C3F2B76DCF4006C44C5 /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4C65C372B76CB6B006C44C5 /* SFProDisplay-Bold.ttf */; };
 		D4C65C402B76DCF6006C44C5 /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4C65C382B76CB70006C44C5 /* SFProDisplay-Regular.ttf */; };
 		D4C65C412B76DCF9006C44C5 /* SFProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4C65C392B76CB7A006C44C5 /* SFProDisplay-Semibold.ttf */; };
@@ -35,6 +39,8 @@
 		3F33462E6639D081DF444901 /* Pods-OzinsheBySnapKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OzinsheBySnapKit.debug.xcconfig"; path = "Target Support Files/Pods-OzinsheBySnapKit/Pods-OzinsheBySnapKit.debug.xcconfig"; sourceTree = "<group>"; };
 		64D98174CAC6420ED008490A /* Pods-OzinsheBySnapKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OzinsheBySnapKit.release.xcconfig"; path = "Target Support Files/Pods-OzinsheBySnapKit/Pods-OzinsheBySnapKit.release.xcconfig"; sourceTree = "<group>"; };
 		9B1C0B0A64CE884EF6F1B2BE /* Pods_OzinsheBySnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OzinsheBySnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D40190622B7E1EB200E9802B /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		D40190642B7F6DC800E9802B /* ReusableFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableFuncs.swift; sourceTree = "<group>"; };
 		D42877BC2B76A5F500E7935C /* OzinsheBySnapKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OzinsheBySnapKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D42877BF2B76A5F500E7935C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D42877C12B76A5F500E7935C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,11 +57,13 @@
 		D4B2FE622B7A1B6F00C0892E /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		D4B2FE652B7A5B6B00C0892E /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
 		D4B2FE6C2B7B58AA00C0892E /* OnboardingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingItem.swift; sourceTree = "<group>"; };
+		D4B2FE6E2B7CD17B00C0892E /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		D4B2FE702B7CEEA100C0892E /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		D4B2FE722B7E181E00C0892E /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		D4C65C342B76AD1E006C44C5 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		D4C65C372B76CB6B006C44C5 /* SFProDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Bold.ttf"; sourceTree = "<group>"; };
 		D4C65C382B76CB70006C44C5 /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		D4C65C392B76CB7A006C44C5 /* SFProDisplay-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Semibold.ttf"; sourceTree = "<group>"; };
-		D4C65C3B2B76D786006C44C5 /* TextFielWithPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFielWithPadding.swift; sourceTree = "<group>"; };
 		D4C65C462B7743FB006C44C5 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D4C65C492B774454006C44C5 /* kk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = kk; path = kk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D4C65C4A2B774455006C44C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -89,6 +97,15 @@
 				9B1C0B0A64CE884EF6F1B2BE /* Pods_OzinsheBySnapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D40190662B7F758200E9802B /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				D4C65C342B76AD1E006C44C5 /* SignInViewController.swift */,
+				D4B2FE702B7CEEA100C0892E /* RegistrationViewController.swift */,
+			);
+			path = Authorization;
 			sourceTree = "<group>";
 		};
 		D42877B32B76A5F500E7935C = {
@@ -156,6 +173,9 @@
 			isa = PBXGroup;
 			children = (
 				D4B2FE6C2B7B58AA00C0892E /* OnboardingItem.swift */,
+				D4B2FE722B7E181E00C0892E /* TextFieldView.swift */,
+				D40190642B7F6DC800E9802B /* ReusableFuncs.swift */,
+				D40190622B7E1EB200E9802B /* TextField.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -173,7 +193,8 @@
 		D4C65C3A2B76D767006C44C5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D4C65C342B76AD1E006C44C5 /* SignInViewController.swift */,
+				D40190662B7F758200E9802B /* Authorization */,
+				D4B2FE6E2B7CD17B00C0892E /* CustomNavigationController.swift */,
 				D4B2FE642B7A578100C0892E /* Onboarding */,
 				D4C65C4B2B775C39006C44C5 /* TabBarController.swift */,
 				D4B2FE522B7795EA00C0892E /* HomeViewController.swift */,
@@ -188,7 +209,6 @@
 		D4C65C3E2B76D7AB006C44C5 /* Extenstions */ = {
 			isa = PBXGroup;
 			children = (
-				D4C65C3B2B76D786006C44C5 /* TextFielWithPadding.swift */,
 				D4B2FE622B7A1B6F00C0892E /* GradientView.swift */,
 			);
 			path = Extenstions;
@@ -314,15 +334,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4C65C3C2B76D786006C44C5 /* TextFielWithPadding.swift in Sources */,
 				D4B2FE5F2B78171E00C0892E /* Storage.swift in Sources */,
 				D4B2FE6D2B7B58AA00C0892E /* OnboardingItem.swift in Sources */,
 				D42877C02B76A5F500E7935C /* AppDelegate.swift in Sources */,
+				D40190652B7F6DC800E9802B /* ReusableFuncs.swift in Sources */,
 				D4B2FE572B77960B00C0892E /* SearchViewController.swift in Sources */,
 				D42877C22B76A5F500E7935C /* SceneDelegate.swift in Sources */,
 				D4B2FE552B7795FB00C0892E /* FavoriteViewController.swift in Sources */,
 				D4C65C4C2B775C3A006C44C5 /* TabBarController.swift in Sources */,
+				D4B2FE732B7E181E00C0892E /* TextFieldView.swift in Sources */,
+				D4B2FE712B7CEEA100C0892E /* RegistrationViewController.swift in Sources */,
 				D4B2FE612B7A133400C0892E /* OnboardingViewController.swift in Sources */,
+				D40190632B7E1EB200E9802B /* TextField.swift in Sources */,
+				D4B2FE6F2B7CD17B00C0892E /* CustomNavigationController.swift in Sources */,
 				D4B2FE662B7A5B6B00C0892E /* OnboardingCell.swift in Sources */,
 				D4B2FE592B77961A00C0892E /* ProfileViewController.swift in Sources */,
 				D4C65C352B76AD1E006C44C5 /* SignInViewController.swift in Sources */,

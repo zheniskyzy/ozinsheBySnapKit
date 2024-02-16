@@ -52,3 +52,9 @@
 "DEPARTMENTS" = "Бөлімдер";
 "SCREENSHOTS" = "Скриншоттар";
 "SIMILAR_TV" = "Ұқсас телехикаялар";
+"NEXT" = "Әрі қарай";
+"OR" = "Немесе";
+"LOGIN_WITH_APPLE" = "Apple ID-мен тіркеліңіз";
+"LOGIN_WITH_GOOGLE" = "Google-мен тіркеліңіз";
+"INVALID_FORMAT" = "Қате формат";
+"FORGOT_PASSWORD?" = "Құпия сөзді ұмыттыңыз ба?";

@@ -52,3 +52,9 @@
 "DEPARTMENTS" = "Departments";
 "SCREENSHOTS" = "Screenshots";
 "SIMILAR_TV" = "Similar TV";
+"NEXT" = "Next";
+"OR" = "Or";
+"LOGIN_WITH_APPLE" = "LogIn with Apple";
+"LOGIN_WITH_GOOGLE" = "LogIn with Google";
+"INVALID_FORMAT" = "Invalid format";
+"FORGOT_PASSWORD?" = "Forgot password?";
