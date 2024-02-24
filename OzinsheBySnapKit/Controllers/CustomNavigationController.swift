@@ -23,6 +23,7 @@ class CustomNavigationController: UINavigationController {
             viewController.navigationController?.navigationBar.isHidden = false
             viewController.navigationItem.leftBarButtonItem = backButtonItem
         }
+        
     }
     @objc private func goBack() {
             self.popViewController(animated: true)

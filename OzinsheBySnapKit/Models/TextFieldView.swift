@@ -17,16 +17,6 @@ var error: String? {
             aboutError()
         }
     }
-//    var title: String {
-//        didSet {
-//            titleLabel.text = title
-//        }
-//    }
-//    var placeholder: String {
-//        didSet {
-//            textfield.placeholder = placeholder
-//        }
-//    }
     
     var titleLabel: UILabel = {
         let label = UILabel()
@@ -72,7 +62,7 @@ extension TextFieldView {
             make.top.horizontalEdges.equalToSuperview()
         }
         textfield.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom).inset(-8)
+            make.top.equalTo(titleLabel.snp.bottom).inset(adaptiveSize(for: -8))
             make.horizontalEdges.equalToSuperview()
         }
         errorLabel.snp.makeConstraints { make in
@@ -90,7 +80,7 @@ extension TextFieldView {
         }else{
             layer.borderColor = UIColor(named: "FF402B (error)")?.cgColor
             errorLabel.snp.remakeConstraints { make in
-                make.top.equalTo(textfield.snp.bottom).inset(-16)
+                make.top.equalTo(textfield.snp.bottom).inset(adaptiveSize(for: -16))
                 make.bottom.equalToSuperview()
             }
         }

@@ -54,15 +54,15 @@ class OnboardingCell: UICollectionViewCell {
        imageView.snp.makeConstraints { make in
            make.top.equalToSuperview()
            make.horizontalEdges.equalToSuperview()
-           make.height.equalTo(504)
+           make.height.equalTo(adaptiveHeight(for: 504))
        }
        titleLabel.snp.makeConstraints { make in
-           make.horizontalEdges.equalToSuperview().inset(40)
-           make.bottom.equalTo(imageView.snp.bottom).inset(2)
+           make.horizontalEdges.equalToSuperview().inset(adaptiveSize(for: 40))
+           make.bottom.equalTo(imageView.snp.bottom).inset(adaptiveSize(for: 2))
        }
        subtitleLabel.snp.makeConstraints { make in
-           make.horizontalEdges.equalToSuperview().inset(32)
-           make.top.equalTo(titleLabel.snp.bottom).inset(-24)
+           make.horizontalEdges.equalToSuperview().inset(adaptiveSize(for: 32))
+           make.top.equalTo(titleLabel.snp.bottom).inset(adaptiveSize(for: -24))
            
        }
     }

@@ -36,11 +36,6 @@ class TextField: UITextField {
         return imageview
     }()
     
-//    var image: UIImage {
-//        didSet{
-//             imageView.image = image
-//         }
-//     }
     // MARK: - button
     
    lazy var showButton: UIButton = {
@@ -85,7 +80,6 @@ class TextField: UITextField {
     @objc func didEnd(){
         layer.borderColor = UIColor(named: "E5EBF0-374151 borderTF")?.cgColor
     }
-
 }
 
 extension TextField {
@@ -103,17 +97,15 @@ extension TextField {
         
         addTarget(self, action: #selector(didBegin), for: .editingDidBegin)
         addTarget(self, action: #selector(didEnd), for: .editingDidEnd)
-        
-        
     }
     func setupConstraints(){
         imageView.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
-            make.size.equalTo(20)
-            make.left.equalToSuperview().inset(16)
+            make.size.equalTo(adaptiveSize(for: 20))
+            make.left.equalToSuperview().inset(adaptiveSize(for: 16))
         }
         showButton.snp.makeConstraints { make in
-            make.width.equalTo(52)
+            make.width.equalTo(adaptiveSize(for: 52))
             make.right.equalToSuperview()
             make.top.bottom.equalToSuperview()
         }

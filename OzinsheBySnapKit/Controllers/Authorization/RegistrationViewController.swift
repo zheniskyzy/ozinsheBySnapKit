@@ -150,7 +150,7 @@ extension RegistrationViewController {
         let email = emailTextFieldView.textfield.text!
         let password = passwordTextFieldView.textfield.text!
         
-        if email.isEmpty || !ReusableFuncs().isValidEmail(email) {
+        if email.isEmpty || !email.isValidEmail() {
              emailTextFieldView.error = "INVALID_FORMAT".localized()
         }else{
             emailTextFieldView.error = nil
@@ -173,7 +173,7 @@ extension RegistrationViewController {
                 if let token = json["accessToken"].string{
                     Storage.sharedInstance.accessToken = token
                     UserDefaults.standard.set(token, forKey: "accessToken")
-                    ReusableFuncs().startApp(self)
+                    
                 }else{
                     SVProgressHUD.showError(withStatus: "CONNECTION_ERROR".localized())
                 }

@@ -95,19 +95,19 @@ class OnboardingViewController: UIViewController, UICollectionViewDelegate, UICo
             make.bottom.equalTo(view.safeAreaLayoutGuide)
         }
         skipButton.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(60)
-            make.right.equalToSuperview().inset(16)
-            make.height.equalTo(24)
+            make.top.equalToSuperview().inset(adaptiveSize(for: 60))
+            make.right.equalToSuperview().inset(adaptiveSize(for: 16))
+            make.height.equalTo(adaptiveSize(for: 24))
         }
         pageControl.snp.makeConstraints { make in
-            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(118)
+            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(adaptiveSize(for: 118))
             make.horizontalEdges.equalToSuperview()
            
         }
         button.snp.makeConstraints { make in
-            make.top.equalTo(pageControl.snp.bottom).inset(-24)
-            make.height.equalTo(56)
-            make.horizontalEdges.equalToSuperview().inset(24)
+            make.top.equalTo(pageControl.snp.bottom).inset(adaptiveSize(for: -24))
+            make.height.equalTo(adaptiveSize(for: 56))
+            make.horizontalEdges.equalToSuperview().inset(adaptiveSize(for: 24))
         }
     }
     

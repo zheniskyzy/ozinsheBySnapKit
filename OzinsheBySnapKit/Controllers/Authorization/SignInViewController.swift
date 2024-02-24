@@ -17,6 +17,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         let helloLabel = UILabel()
         helloLabel.text = "HELLO".localized()
         helloLabel.font = UIFont(name: "SFProDisplay-Bold", size: 24)
+//        helloLabel.font =
         helloLabel.textColor = UIColor(named: "111827-White(view, font etc)")
         return helloLabel
     }()
@@ -29,9 +30,9 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         return subTitleLabel
     }()
     
-    let stackViewForTextfield: UIStackView = {
+    lazy var stackViewForTextfield: UIStackView = {
         let stackView = UIStackView()
-        stackView.spacing = 16
+        stackView.spacing = adaptiveSize(for: 16)
         stackView.axis = .vertical
         return stackView
     }()
@@ -78,7 +79,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         return button
       }()
 
-    var stackViewForLabelAndButton: UIStackView = {
+   lazy var stackViewForLabelAndButton: UIStackView = {
        var stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.spacing = 4
@@ -175,14 +176,13 @@ extension SignInViewController {
     @objc func buttonSignIn(){
         let email = emailTextFieldView.textfield.text!
         let password = passwordTextFieldView.textfield.text!
-// хотела нижкий кусочек кода затолкать в ReusableFuncs  но так и не смогла додумать реализацию
-//       ReusableFuncs().errorHandling(email: email)
-        
-        if email.isEmpty || !ReusableFuncs().isValidEmail(email) {
+
+        if email.isEmpty || !email.isValidEmail(){
              emailTextFieldView.error = "INVALID_FORMAT".localized()
         }else{
             emailTextFieldView.error = nil
         }
+        
         
         SVProgressHUD.show()
         
@@ -204,7 +204,8 @@ extension SignInViewController {
                     Storage.sharedInstance.accessToken = token
                     UserDefaults.standard.set(token, forKey: "accessToken")
                     UserDefaults.standard.set(email, forKey: "email")
-                    ReusableFuncs().startApp(self)
+//                    ReusableFuncs().startApp(self)
+                    self.startApp(self)
                     
                 }else{
                     SVProgressHUD.showError(withStatus: "CONNECTION_ERROR")
@@ -220,53 +221,53 @@ extension SignInViewController {
     func setupConstraints(){
         
         helloLabel.snp.makeConstraints { make in
-            make.left.equalTo(view.safeAreaLayoutGuide).inset(24)
-            make.top.equalTo(view.safeAreaLayoutGuide).inset(16)
+            make.left.equalTo(view.safeAreaLayoutGuide).inset(adaptiveSize(for: 24))
+            make.top.equalTo(view.safeAreaLayoutGuide).inset(adaptiveSize(for: 16))
         }
         subTitleLabel.snp.makeConstraints { make in
-            make.top.equalTo(helloLabel.snp.bottom).inset(-10)
-            make.left.equalTo(view.safeAreaLayoutGuide).inset(24)
+            make.top.equalTo(helloLabel.snp.bottom).inset(adaptiveSize(for: -10))
+            make.left.equalTo(view.safeAreaLayoutGuide).inset(adaptiveSize(for: 24))
         }
         stackViewForTextfield.snp.makeConstraints { make in
-            make.top.equalTo(subTitleLabel.snp.bottom).inset(-32)
-            make.horizontalEdges.equalToSuperview().inset(24)
+            make.top.equalTo(subTitleLabel.snp.bottom).inset(adaptiveSize(for: -32))
+            make.horizontalEdges.equalToSuperview().inset(adaptiveSize(for: 24))
         }
         passwordForgotButton.snp.makeConstraints { make in
-            make.horizontalEdges.equalToSuperview().inset(24)
-            make.top.equalTo(stackViewForTextfield.snp.bottom).inset(-17)
+            make.horizontalEdges.equalToSuperview().inset(adaptiveSize(for: 24))
+            make.top.equalTo(stackViewForTextfield.snp.bottom).inset(adaptiveSize(for: -17))
         }
         button.snp.makeConstraints { make in
-              make.horizontalEdges.equalTo(view.safeAreaLayoutGuide).inset(24)
-              make.height.equalTo(56)
-              make.top.equalTo(passwordForgotButton.snp.bottom).inset(-40)
+              make.horizontalEdges.equalTo(view.safeAreaLayoutGuide).inset(adaptiveSize(for: 24))
+              make.height.equalTo(adaptiveSize(for: 56))
+              make.top.equalTo(passwordForgotButton.snp.bottom).inset(adaptiveSize(for: -40))
             }
         stackViewForLabelAndButton.snp.makeConstraints { make in
-            make.top.equalTo(button.snp.bottom).inset(-24)
+            make.top.equalTo(button.snp.bottom).inset(adaptiveSize(for: -24))
             make.centerX.equalToSuperview()
         }
         orLabel.snp.makeConstraints { make in
-              make.top.equalTo(stackViewForLabelAndButton.snp.bottom).inset(-40)
-              make.horizontalEdges.equalToSuperview().inset(24)
+              make.top.equalTo(stackViewForLabelAndButton.snp.bottom).inset(adaptiveSize(for: -40))
+              make.horizontalEdges.equalToSuperview().inset(adaptiveSize(for: 24))
             }
         appleButton.snp.makeConstraints { make in
-             make.top.equalTo(orLabel.snp.bottom).inset(-16)
-             make.horizontalEdges.equalToSuperview().inset(24)
-             make.height.equalTo(52)
+             make.top.equalTo(orLabel.snp.bottom).inset(adaptiveSize(for: -16))
+             make.horizontalEdges.equalToSuperview().inset(adaptiveSize(for: 24))
+             make.height.equalTo(adaptiveSize(for: 52))
            }
            appleImage.snp.makeConstraints { make in
-             make.height.width.equalTo(16)
+             make.height.width.equalTo(adaptiveSize(for: 16))
              make.centerY.equalTo(appleButton)
-             make.right.equalTo(appleButton.titleLabel!.snp.left).inset(-8)
+             make.right.equalTo(appleButton.titleLabel!.snp.left).inset(adaptiveSize(for: -8))
            }
            googleButton.snp.makeConstraints { make in
-             make.top.equalTo(appleButton.snp.bottom).inset(-8)
-             make.horizontalEdges.equalToSuperview().inset(24)
-             make.height.equalTo(52)
+             make.top.equalTo(appleButton.snp.bottom).inset(adaptiveSize(for: -8))
+             make.horizontalEdges.equalToSuperview().inset(adaptiveSize(for: 24))
+             make.height.equalTo(adaptiveSize(for: 52))
            }
            googleImage.snp.makeConstraints { make in
-             make.height.width.equalTo(16)
+             make.height.width.equalTo(adaptiveSize(for: 16))
              make.centerY.equalTo(googleButton)
-             make.right.equalTo(googleButton.titleLabel!.snp.left).inset(-8)
+             make.right.equalTo(googleButton.titleLabel!.snp.left).inset(adaptiveSize(for: -8))
            }
     }
 

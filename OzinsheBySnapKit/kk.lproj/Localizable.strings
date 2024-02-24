@@ -47,6 +47,7 @@
 "ADD_TO_FAVORITE" = "Тізімге қосу";
 "SHARE" = "Бөлісу";
 "READ_MORE" = "Толығырақ";
+"HIDE" = "Жасыру";
 "DIRECTOR" = "Режиссер";
 "PRODUCER" = "Продюсер";
 "DEPARTMENTS" = "Бөлімдер";
@@ -58,3 +59,4 @@
 "LOGIN_WITH_GOOGLE" = "Google-мен тіркеліңіз";
 "INVALID_FORMAT" = "Қате формат";
 "FORGOT_PASSWORD?" = "Құпия сөзді ұмыттыңыз ба?";
+"EPIZODE" = "-ші бөлім";

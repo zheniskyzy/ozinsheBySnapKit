@@ -20,6 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
        let rootVC = CustomNavigationController(rootViewController: OnboardingViewController())
         window?.rootViewController = rootVC
         window?.makeKeyAndVisible()
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
