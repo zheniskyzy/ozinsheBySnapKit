@@ -294,6 +294,7 @@ class DetailViewController: UIViewController, UICollectionViewDelegate, UICollec
             }
         }
     }
+   
 
     @objc func fullDescription(){
         if descriptionLabel.numberOfLines > 4 {

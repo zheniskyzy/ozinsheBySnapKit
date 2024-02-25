@@ -36,7 +36,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         downloadMainBanners()
         addNavBarImage()
     }
-    
+//    override func viewWillAppear(_ animated: Bool) {
+//        self.tabBarController?.tabBar.isHidden = false
+//    }
     //    MARK: - tableview data source
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -95,7 +97,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         if mainMovies[indexPath.row].cellType != .mainMovie{
             return
         }
-        let categoryVC = CategoryViewController()
+        let categoryVC = CategoryTableViewController()
         categoryVC.categoryID = mainMovies[indexPath.row].categoryId
         categoryVC.categoryName = mainMovies[indexPath.row].categoryName
 
@@ -108,13 +110,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
           navigationController?.pushViewController(detailVC, animated: true)
     }
     func genreDidSelect(genreId: Int, genreName: String) {
-        let categoryVC = CategoryViewController()
+        let categoryVC = CategoryTableViewController()
         categoryVC.genreID = genreId
         categoryVC.genreName = genreName
         navigationController?.pushViewController(categoryVC, animated: true)
     }
     func ageCategoryDidSelect(categoryAgeId: Int) {
-        let categoryVC = CategoryViewController()
+        let categoryVC = CategoryTableViewController()
         categoryVC.categoryAgeID = categoryAgeId
         navigationController?.pushViewController(categoryVC, animated: true)
     }
