@@ -10,9 +10,9 @@ import UIKit
 
 extension UIViewController{
     
-    func startApp(_ viewController: UIViewController){
+    func startApp(){
         let tabBarVC = TabBarController()
         tabBarVC.modalPresentationStyle = .fullScreen
-        viewController.present(tabBarVC, animated: true)
+        self.present(tabBarVC, animated: true)
     }
 }

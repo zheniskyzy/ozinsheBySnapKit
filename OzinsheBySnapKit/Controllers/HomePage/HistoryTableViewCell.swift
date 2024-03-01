@@ -19,7 +19,6 @@ class HistoryTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColle
        var categoryNameLabel = UILabel()
         categoryNameLabel.font = UIFont(name: "SFProDisplay-Bold", size: 16)
         categoryNameLabel.textColor = UIColor(named: "111827-White(view, font etc)")
-        categoryNameLabel.text = "CONTINUE_WATCHING".localized()
         return categoryNameLabel
     }()
     
@@ -57,6 +56,9 @@ class HistoryTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColle
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    override func prepareForReuse() {
+        categoryNameLabel.text = "CONTINUE_WATCHING".localized()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

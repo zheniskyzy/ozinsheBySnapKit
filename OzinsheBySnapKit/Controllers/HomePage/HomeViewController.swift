@@ -35,10 +35,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         constraints()
         downloadMainBanners()
         addNavBarImage()
+        
     }
-//    override func viewWillAppear(_ animated: Bool) {
-//        self.tabBarController?.tabBar.isHidden = false
-//    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
+        tableView.reloadData()
+    }
     //    MARK: - tableview data source
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -100,8 +103,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let categoryVC = CategoryTableViewController()
         categoryVC.categoryID = mainMovies[indexPath.row].categoryId
         categoryVC.categoryName = mainMovies[indexPath.row].categoryName
-
+        categoryVC.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(categoryVC, animated: true)
+        
     }
 
     func movieDidSelect(movie: Movie) {

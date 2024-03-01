@@ -49,7 +49,7 @@ class TextField: UITextField {
         return showButton
     }()
     // MARK: - padding
-    var padding = UIEdgeInsets(top: 16, left: 40, bottom: 16, right: 52);
+    var padding = UIEdgeInsets(top: 16, left: 44, bottom: 16, right: 52);
     required init?(coder: NSCoder) {
             fatalError("init(coder:) has not been implemented")
         }
@@ -90,7 +90,7 @@ extension TextField {
         layer.borderColor = UIColor(named: "E5EBF0-374151 borderTF")?.cgColor
         font = UIFont(name: "SFProDisplay-Semibold", size: 16)
         textColor = UIColor(named: "111827-White(view, font etc)")
-        backgroundColor = UIColor(named: "White-111827(view, font etc)")
+        backgroundColor = UIColor(named: "white-1C2431")
         
        addSubview(imageView)
        addSubview(showButton)

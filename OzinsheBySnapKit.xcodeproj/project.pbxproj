@@ -17,6 +17,11 @@
 		D43C15F52B8A777700D0D349 /* ScreenshotShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43C15F42B8A777700D0D349 /* ScreenshotShowViewController.swift */; };
 		D43C15F72B8A96C600D0D349 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43C15F62B8A96C600D0D349 /* CategoryTableViewController.swift */; };
 		D43C15FA2B8B459F00D0D349 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43C15F92B8B459F00D0D349 /* MovieTableViewCell.swift */; };
+		D43C15FF2B8CB59400D0D349 /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43C15FE2B8CB59400D0D349 /* LanguageViewController.swift */; };
+		D43C16012B8CC60500D0D349 /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43C16002B8CC60500D0D349 /* PersonalInfoViewController.swift */; };
+		D43C16032B8F295300D0D349 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43C16022B8F295300D0D349 /* ChangePasswordViewController.swift */; };
+		D43C16052B8F531400D0D349 /* ExitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43C16042B8F531400D0D349 /* ExitViewController.swift */; };
+		D43C16082B8F5D6200D0D349 /* FavoriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43C16072B8F5D6200D0D349 /* FavoriteTableViewController.swift */; };
 		D476D0AE2B7FA60D008ABCAA /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D476D0AD2B7FA60D008ABCAA /* UIFont+Extension.swift */; };
 		D4A45F002B83C11000C2AB87 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A45EFF2B83C11000C2AB87 /* String+Extension.swift */; };
 		D4A45F022B83C18100C2AB87 /* UIViewController+EXtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A45F012B83C18100C2AB87 /* UIViewController+EXtension.swift */; };
@@ -43,7 +48,6 @@
 		D4A45F3B2B87F4F700C2AB87 /* MoviePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A45F3A2B87F4F700C2AB87 /* MoviePlayerViewController.swift */; };
 		D4A45F3F2B87F65E00C2AB87 /* SeasonsSeriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A45F3E2B87F65E00C2AB87 /* SeasonsSeriesViewController.swift */; };
 		D4B2FE532B7795EA00C0892E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B2FE522B7795EA00C0892E /* HomeViewController.swift */; };
-		D4B2FE552B7795FB00C0892E /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B2FE542B7795FB00C0892E /* FavoriteViewController.swift */; };
 		D4B2FE572B77960B00C0892E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B2FE562B77960B00C0892E /* SearchViewController.swift */; };
 		D4B2FE592B77961A00C0892E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B2FE582B77961A00C0892E /* ProfileViewController.swift */; };
 		D4B2FE5C2B7816B300C0892E /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B2FE5B2B7816B300C0892E /* Urls.swift */; };
@@ -78,6 +82,11 @@
 		D43C15F42B8A777700D0D349 /* ScreenshotShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotShowViewController.swift; sourceTree = "<group>"; };
 		D43C15F62B8A96C600D0D349 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		D43C15F92B8B459F00D0D349 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		D43C15FE2B8CB59400D0D349 /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
+		D43C16002B8CC60500D0D349 /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
+		D43C16022B8F295300D0D349 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		D43C16042B8F531400D0D349 /* ExitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitViewController.swift; sourceTree = "<group>"; };
+		D43C16072B8F5D6200D0D349 /* FavoriteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewController.swift; sourceTree = "<group>"; };
 		D476D0AD2B7FA60D008ABCAA /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		D4A45EFF2B83C11000C2AB87 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		D4A45F012B83C18100C2AB87 /* UIViewController+EXtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+EXtension.swift"; sourceTree = "<group>"; };
@@ -104,7 +113,6 @@
 		D4A45F3A2B87F4F700C2AB87 /* MoviePlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePlayerViewController.swift; sourceTree = "<group>"; };
 		D4A45F3E2B87F65E00C2AB87 /* SeasonsSeriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonsSeriesViewController.swift; sourceTree = "<group>"; };
 		D4B2FE522B7795EA00C0892E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		D4B2FE542B7795FB00C0892E /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		D4B2FE562B77960B00C0892E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		D4B2FE582B77961A00C0892E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D4B2FE5B2B7816B300C0892E /* Urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
@@ -210,6 +218,26 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		D43C15FB2B8BEC3400D0D349 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D4B2FE582B77961A00C0892E /* ProfileViewController.swift */,
+				D43C15FE2B8CB59400D0D349 /* LanguageViewController.swift */,
+				D43C16042B8F531400D0D349 /* ExitViewController.swift */,
+				D43C16022B8F295300D0D349 /* ChangePasswordViewController.swift */,
+				D43C16002B8CC60500D0D349 /* PersonalInfoViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		D43C16062B8F5D4200D0D349 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				D43C16072B8F5D6200D0D349 /* FavoriteTableViewController.swift */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
 		D4A45F032B83DA3900C2AB87 /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,15 +337,15 @@
 			isa = PBXGroup;
 			children = (
 				D4B2FE6E2B7CD17B00C0892E /* CustomNavigationController.swift */,
+				D4C65C4B2B775C39006C44C5 /* TabBarController.swift */,
 				D4A45F3D2B87F63A00C2AB87 /* Season and Series */,
 				D4A45F392B87F4D600C2AB87 /* MoviePlayer */,
 				D40190662B7F758200E9802B /* Authorization */,
 				D4A45F222B8635F100C2AB87 /* MovieInfo */,
 				D4B2FE642B7A578100C0892E /* Onboarding */,
-				D4C65C4B2B775C39006C44C5 /* TabBarController.swift */,
 				D4A45F032B83DA3900C2AB87 /* HomePage */,
-				D4B2FE542B7795FB00C0892E /* FavoriteViewController.swift */,
-				D4B2FE582B77961A00C0892E /* ProfileViewController.swift */,
+				D43C16062B8F5D4200D0D349 /* Favorite */,
+				D43C15FB2B8BEC3400D0D349 /* Profile */,
 				D43C15F82B8B456000D0D349 /* Search */,
 				D4C65C3E2B76D7AB006C44C5 /* Extenstions */,
 			);
@@ -475,10 +503,11 @@
 				D4B2FE572B77960B00C0892E /* SearchViewController.swift in Sources */,
 				D42877C22B76A5F500E7935C /* SceneDelegate.swift in Sources */,
 				D43C15F32B89F43400D0D349 /* UILabel+ Extensions.swift in Sources */,
-				D4B2FE552B7795FB00C0892E /* FavoriteViewController.swift in Sources */,
+				D43C16012B8CC60500D0D349 /* PersonalInfoViewController.swift in Sources */,
 				D4C65C4C2B775C3A006C44C5 /* TabBarController.swift in Sources */,
 				D4A45F1D2B850E5F00C2AB87 /* ByCategoryCollectionViewCell.swift in Sources */,
 				D4B2FE732B7E181E00C0892E /* TextFieldView.swift in Sources */,
+				D43C16052B8F531400D0D349 /* ExitViewController.swift in Sources */,
 				D4A45F022B83C18100C2AB87 /* UIViewController+EXtension.swift in Sources */,
 				D4A45F132B84E97D00C2AB87 /* BannerMovie.swift in Sources */,
 				D4B2FE712B7CEEA100C0892E /* RegistrationViewController.swift in Sources */,
@@ -489,7 +518,9 @@
 				D4A45F0D2B84E92D00C2AB87 /* Screenshot.swift in Sources */,
 				D43C15F72B8A96C600D0D349 /* CategoryTableViewController.swift in Sources */,
 				D4A45F262B865B3B00C2AB87 /* HistoryTableViewCell.swift in Sources */,
+				D43C16082B8F5D6200D0D349 /* FavoriteTableViewController.swift in Sources */,
 				D4A45F052B83DA7E00C2AB87 /* MainBannerTableViewCell.swift in Sources */,
+				D43C15FF2B8CB59400D0D349 /* LanguageViewController.swift in Sources */,
 				D4A45F172B84EDD700C2AB87 /* MovieProtocol.swift in Sources */,
 				D4A45F072B83DFCF00C2AB87 /* bannerCollectionViewCell.swift in Sources */,
 				D4B2FE662B7A5B6B00C0892E /* OnboardingCell.swift in Sources */,
@@ -505,6 +536,7 @@
 				D4B2FE632B7A1B6F00C0892E /* GradientView.swift in Sources */,
 				D4B2FE532B7795EA00C0892E /* HomeViewController.swift in Sources */,
 				D4A45F2A2B865E9400C2AB87 /* NSObject+Extension.swift in Sources */,
+				D43C16032B8F295300D0D349 /* ChangePasswordViewController.swift in Sources */,
 				D476D0AE2B7FA60D008ABCAA /* UIFont+Extension.swift in Sources */,
 				D4B2FE5C2B7816B300C0892E /* Urls.swift in Sources */,
 				D4A45F382B87ECD800C2AB87 /* ScreenshotCollectionViewCell.swift in Sources */,

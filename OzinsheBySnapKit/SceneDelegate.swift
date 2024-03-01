@@ -10,9 +10,10 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+//    var currentScene: UIScene?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        (UIApplication.shared.delegate as? AppDelegate)?.self.window = window
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(windowScene: windowScene)
@@ -21,7 +22,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = rootVC
         window?.makeKeyAndVisible()
         
+        if let accessToken = UserDefaults.standard.string(forKey: "accessToken"){
+            Storage.sharedInstance.accessToken = accessToken
+            
+            let viewController = TabBarController()
+            self.window?.rootViewController = viewController
+            self.window?.makeKeyAndVisible()
+        }
     }
+    
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.

@@ -13,11 +13,27 @@ import Localize_Swift
 
 class SignInViewController: UIViewController, UITextFieldDelegate {
     
+    var scrollView: UIScrollView = {
+       var scrollview = UIScrollView()
+        scrollview.backgroundColor = .clear
+        scrollview.showsVerticalScrollIndicator = true
+        scrollview.isScrollEnabled = true
+        scrollview.clipsToBounds = true
+        scrollview.contentMode = .scaleAspectFill
+        scrollview.contentInsetAdjustmentBehavior = .never
+        return scrollview
+    }()
+    
+    var contentview: UIView = {
+        var view = UIView()
+            view.backgroundColor = UIColor(named: "White-111827(view, font etc)")
+        return view
+    }()
+    
     let helloLabel: UILabel = {
         let helloLabel = UILabel()
         helloLabel.text = "HELLO".localized()
         helloLabel.font = UIFont(name: "SFProDisplay-Bold", size: 24)
-//        helloLabel.font =
         helloLabel.textColor = UIColor(named: "111827-White(view, font etc)")
         return helloLabel
     }()
@@ -153,21 +169,29 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "White-111827(view, font etc)")
-        view.addSubview(helloLabel)
-        view.addSubview(subTitleLabel)
-        view.addSubview(stackViewForTextfield)
+        view.addSubview(scrollView)
+        
+        scrollView.addSubview(contentview)
+        contentview.addSubview(helloLabel)
+        contentview.addSubview(subTitleLabel)
+        contentview.addSubview(stackViewForTextfield)
+        
         stackViewForTextfield.addArrangedSubview(emailTextFieldView)
         stackViewForTextfield.addArrangedSubview(passwordTextFieldView)
-        view.addSubview(passwordForgotButton)
-        view.addSubview(button)
-        view.addSubview(stackViewForLabelAndButton)
+        
+        contentview.addSubview(passwordForgotButton)
+        contentview.addSubview(button)
+        contentview.addSubview(stackViewForLabelAndButton)
+        
         stackViewForLabelAndButton.addArrangedSubview(accountExistsLabel)
         stackViewForLabelAndButton.addArrangedSubview(registrButton)
-        view.addSubview(orLabel)
-        view.addSubview(appleButton)
-        view.addSubview(appleImage)
-        view.addSubview(googleButton)
-        view.addSubview(googleImage)
+        
+        contentview.addSubview(orLabel)
+        contentview.addSubview(appleButton)
+        contentview.addSubview(appleImage)
+        contentview.addSubview(googleButton)
+        contentview.addSubview(googleImage)
+        
         setupConstraints()
     }
 }
@@ -204,8 +228,7 @@ extension SignInViewController {
                     Storage.sharedInstance.accessToken = token
                     UserDefaults.standard.set(token, forKey: "accessToken")
                     UserDefaults.standard.set(email, forKey: "email")
-//                    ReusableFuncs().startApp(self)
-                    self.startApp(self)
+                    self.startApp()
                     
                 }else{
                     SVProgressHUD.showError(withStatus: "CONNECTION_ERROR")
@@ -219,14 +242,21 @@ extension SignInViewController {
           navigationController?.pushViewController(registrationVC, animated: true)
       }
     func setupConstraints(){
-        
+        scrollView.snp.makeConstraints { make in
+            make.horizontalEdges.equalToSuperview()
+            make.top.bottom.equalTo(view.safeAreaLayoutGuide)
+        }
+        contentview.snp.makeConstraints { make in
+            make.horizontalEdges.top.bottom.equalTo(scrollView.contentLayoutGuide)
+            make.width.equalTo(scrollView.frameLayoutGuide)
+        }
         helloLabel.snp.makeConstraints { make in
             make.left.equalTo(view.safeAreaLayoutGuide).inset(adaptiveSize(for: 24))
-            make.top.equalTo(view.safeAreaLayoutGuide).inset(adaptiveSize(for: 16))
+            make.top.equalToSuperview().inset(adaptiveSize(for: 16))
         }
         subTitleLabel.snp.makeConstraints { make in
             make.top.equalTo(helloLabel.snp.bottom).inset(adaptiveSize(for: -10))
-            make.left.equalTo(view.safeAreaLayoutGuide).inset(adaptiveSize(for: 24))
+            make.left.equalToSuperview().inset(adaptiveSize(for: 24))
         }
         stackViewForTextfield.snp.makeConstraints { make in
             make.top.equalTo(subTitleLabel.snp.bottom).inset(adaptiveSize(for: -32))
@@ -237,7 +267,7 @@ extension SignInViewController {
             make.top.equalTo(stackViewForTextfield.snp.bottom).inset(adaptiveSize(for: -17))
         }
         button.snp.makeConstraints { make in
-              make.horizontalEdges.equalTo(view.safeAreaLayoutGuide).inset(adaptiveSize(for: 24))
+              make.horizontalEdges.equalToSuperview().inset(adaptiveSize(for: 24))
               make.height.equalTo(adaptiveSize(for: 56))
               make.top.equalTo(passwordForgotButton.snp.bottom).inset(adaptiveSize(for: -40))
             }
@@ -268,6 +298,7 @@ extension SignInViewController {
              make.height.width.equalTo(adaptiveSize(for: 16))
              make.centerY.equalTo(googleButton)
              make.right.equalTo(googleButton.titleLabel!.snp.left).inset(adaptiveSize(for: -8))
+               make.bottom.equalToSuperview()
            }
     }
 

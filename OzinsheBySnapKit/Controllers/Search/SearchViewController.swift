@@ -42,16 +42,17 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     var searchTextfield: UITextField = {
        var textfield = UITextField()
-        textfield.placeholder = "SEARCH".localized()
         textfield.textColor = UIColor(named: "111827-White(view, font etc)")
         textfield.backgroundColor = UIColor(named: "White-111827(view, font etc)")
-//        textfield.layer.borderColor = UIColor(named: "E5EBF0-1C2431(border)")?.cgColor
-        textfield.borderStyle = .none
+        textfield.layer.borderColor = UIColor(named: "E5EBF0-1C2431(border)")?.cgColor
         textfield.layer.cornerRadius = 12.0
         textfield.layer.borderWidth = 1.0
         textfield.addTarget(self, action: #selector(didBegin), for: .editingDidBegin)
         textfield.addTarget(self, action: #selector(didEnd), for: .editingDidEnd)
         textfield.addTarget(self, action: #selector(textFieldEditingChanged), for: .editingChanged)
+        
+        textfield.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: textfield.frame.height))
+        textfield.leftViewMode = .always
         return textfield
     }()
     
@@ -73,7 +74,6 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
     }()
     var categoriesLabel: UILabel = {
        var label = UILabel()
-        label.text = "CATEGORIES".localized()
         label.font = UIFont(name: "SFProDisplay-Bold", size: 24)
         label.textColor = UIColor(named: "111827-White(view, font etc)")
         return label
@@ -131,7 +131,10 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
         setupConstraints()
         downloadCategories()
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
+        configureLanguage()
+    }
     
     // MARK: - collectionView
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -192,6 +195,11 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
     }
 }
 extension SearchViewController {
+    func configureLanguage(){
+        searchTextfield.placeholder = "SEARCH".localized()
+        categoriesLabel.text = "CATEGORIES".localized()
+    }
+    
     @objc func clear() {
         searchTextfield.text = ""
         downloadSearchMovies()

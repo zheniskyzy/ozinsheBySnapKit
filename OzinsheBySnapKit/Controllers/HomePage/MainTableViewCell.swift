@@ -73,10 +73,8 @@ class MainTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollecti
     
     var button: UIButton = {
        var button = UIButton()
-        button.setTitle("MORE".localized(), for: .normal)
         button.setTitleColor(UIColor(named: "B376F7 (currentPageC)"), for: .normal)
         button.titleLabel?.font = UIFont(name: "SFProDisplay-Semibold", size: 14)
-       
         return button
     }()
     
@@ -91,6 +89,9 @@ class MainTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollecti
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    override func prepareForReuse() {
+        button.setTitle("MORE".localized(), for: .normal)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

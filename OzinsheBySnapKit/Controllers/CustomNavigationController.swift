@@ -29,3 +29,11 @@ class CustomNavigationController: UINavigationController {
             self.popViewController(animated: true)
         }
 }
+
+/*
+ ЗАМЕТКИ
+  - Не меняется высота таббар
+  - не меняется цвет таббара в homeVC
+  - толыктырак работает с логами на разных фильмах, может проблема от бэка?
+ 
+ */

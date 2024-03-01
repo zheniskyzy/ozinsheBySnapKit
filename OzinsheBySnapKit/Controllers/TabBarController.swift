@@ -9,29 +9,21 @@ import UIKit
 
 class TabBarController: UITabBarController {
     
+    let homeVC = HomeViewController()
+    let searchVC = SearchViewController()
+    let favoriteVC = FavoriteTableViewController()
+    let profileVC = ProfileViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = UIColor(named: "White-111827(view, font etc)")
-        
-        let homeVC = HomeViewController()
-        let searchVC = SearchViewController()
-        let favoriteVC = FavoriteViewController()
-        let profileVC = ProfileViewController()
-        
+        view.backgroundColor = UIColor(named: "white-1C2431")
+        tabBar.backgroundColor = UIColor(named: "white-1C2431")
+      
         
         homeVC.tabBarItem.image = UIImage(named: "Home")
-        homeVC.tabBarItem.selectedImage = UIImage(named: "HomeSelected")
-        
         searchVC.tabBarItem.image = UIImage(named: "Search")
-        searchVC.tabBarItem.selectedImage = UIImage(named: "SearchSelected")
-        
         favoriteVC.tabBarItem.image = UIImage(named: "favorite")
-        favoriteVC.tabBarItem.selectedImage = UIImage(named: "FavoriteSelected")
-        
         profileVC.tabBarItem.image = UIImage(named: "Profile")
-        profileVC.tabBarItem.selectedImage = UIImage(named: "ProfileSelected")
         
         let VCs = [CustomNavigationController(rootViewController: homeVC),
                    CustomNavigationController(rootViewController: searchVC),
@@ -40,8 +32,14 @@ class TabBarController: UITabBarController {
         
         setViewControllers(VCs, animated: true)
         }
-        
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+//        tabBar.frame.size.height = 95
+        homeVC.tabBarItem.selectedImage = UIImage(named: "HomeSelected")!.withRenderingMode(.alwaysOriginal)
+        searchVC.tabBarItem.selectedImage = UIImage(named: "SearchSelected")!.withRenderingMode(.alwaysOriginal)
+        favoriteVC.tabBarItem.selectedImage = UIImage(named: "FavoriteSelected")!.withRenderingMode(.alwaysOriginal)
+        profileVC.tabBarItem.selectedImage = UIImage(named: "ProfileSelected")!.withRenderingMode(.alwaysOriginal)
     }
-
-
+}
 
